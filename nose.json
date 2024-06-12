@@ -1,0 +1,23 @@
+{
+    "name": "Guillermo",
+    "edad": 28,
+    "peliculas": [
+        {
+            "titulo": "La momia",
+            "year": 1999
+        },
+        {
+            "titulo": "The Matrix",
+            "year": 1999
+        },
+        {
+            "titulo": "Saw",
+            "year": 2005
+        }
+    ],
+    "alcohol": false,
+    "delictive": null,
+    "valencia": [],
+    "madrid": [],
+    "sevilla": []
+}

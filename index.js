@@ -186,11 +186,9 @@
 // console.log("las naves".padStart(20, "@"))
 // console.log("las naves".padEnd(20, "@"))
 
-
 // let arrayArrays = [1,2,3,4,[5,6,7,[8,9,10]]];
 
 // console.log(arrayArrays.flat())
-
 
 //EJEMPLO DE MAP
 
@@ -214,3 +212,121 @@
 // ]
 
 // console.log(Object.fromEntries(arrayDeArrays))
+
+// Escribe una función que devuelva el último elemento de un array. Además, debe tener
+// otro parámetro opcional que, en caso de pasarse, devolvería esa cantidad de números
+// empezando por el final. Es decir, si mi array es [1, 2, 3, 4, 5] y yo le paso el 3 como
+// parámetro, debe devolverme [3, 4, 5] y, si no le paso nada como parámetro, debe
+// devolverme solo el 5.
+
+// const LastArray = (array, cantidad = 1) => {
+//   if(Array.isArray(array) && (cantidad >=1 && cantidad <= array.length)){
+
+//       return array.reverse().slice(0, cantidad);
+//   } else {
+//       return "wrong cantidad"
+//   }
+// };
+
+// console.log(LastArray([1, 2, 3, 4, 5, 6, 7, 8], 2));
+
+// Escribe una función que, dado un array de números, devuelva una string con todos
+// esos números e inserte guiones entre los números pares. Es decir, dado el array [0, 2,
+// 3, 4, 6, 7, 8], me devolvería “0 2 3 4-6 7 8”
+
+// const ArrayPares = (array) => {
+
+//     if(Array.isArray(array)){
+//         //[0,2,3,4,6,7,8]
+//         const newArray = array.map(
+//             (numero,i) => {
+//                 return (((numero !== 0) && (numero % 2 === 0)) && ((array[i+1] !== 0) && (array[i+1] % 2 === 0)))
+//                     ? numero + ' -'
+//                     : numero
+//             }
+//         )
+//         return newArray.join(" ")
+//     } else {
+//         console.log("loco!!!!")
+//     }
+
+// }
+
+// console.log(ArrayPares([0,2,3,4,6,0,7,8,0]))
+
+// Dado un array con elementos repetidos, determina qué elemento es el más frecuente
+// y cuántas veces se ha repetido
+
+// let result = {};
+
+// for(let i = 0; i < comida.length; i++){
+//     let num = comida[i];
+//     result[num] = result[num] ? result[num] + 1 : 1;
+// }
+// console.log(result);
+
+//alternativa 2....
+
+// let comida = ["patatas", "hamburgesas", "tortitas", "pizzas", "tortitas", "tortitas", "paella", "pizzas"];
+
+// let comida = [
+//   "patatas",
+//   "hamburgesas",
+//   "tortitas",
+//   "pizzas",
+//   "tortitas",
+//   "tortitas",
+//   "paella",
+//   "pizzas",
+//   "tortitas",
+// ];
+// let result = {};
+
+// for (let i = 0; i < comida.length; i++) {
+//   let num = comida[i];
+
+//   if (num in result === false) {
+//     for (let x = 0; x < comida.length; x++) {
+//       if (comida[x] === num && x !== i) {
+//         //esto demuestra que hay más de 1.
+
+//         result[num] = result[num] ? result[num] + 1 : 2;
+//       }
+//     }
+//   }
+// }
+
+// console.log(result);
+
+
+// let miercoles = {
+//     year: 2024,
+//     month: "June",
+//     happy: true
+// }
+
+// let newMiercoles = JSON.stringify(miercoles);
+
+// console.log(newMiercoles)
+
+// console.log(JSON.parse(newMiercoles))
+
+// let miNuevoArray = ["ford", "ferrari", "rover"];
+
+// let res = JSON.parse(miNuevoArray)
+
+// console.log(res)
+
+let Santiago = {
+    ciudad : "Valencia",
+    hobbies : {
+        hobbie1 : "programar",
+        hobbie2 : "correr",
+        hobbie3 : {
+            caro: true,
+            feliz: true
+        }
+    }
+}
+
+console.log(Santiago.hobbies.hobbie2?.caro)
